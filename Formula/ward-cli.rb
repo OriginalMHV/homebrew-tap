@@ -1,25 +1,25 @@
 class WardCli < Formula
   desc "GitHub repository management for developers. Plan, apply, verify."
   homepage "https://github.com/OriginalMHV/Ward"
-  version "0.2.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.2.1/ward-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "cb9fcc88fbfcca7946068469332cb30c106de59fe229fc3ad865b59f2189af86"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.3.0/ward-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "decc311e1750885514095867dc39b3752d394f3d41e82e7f26aa9f6425b67838"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.2.1/ward-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "bc959be8bc49c90514653bcdcddf51b6a6bdbcfe7e705ce9d569ee0e9a2e1409"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.3.0/ward-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "eecdb409881f274dbc41c54a692397b70ffeb65fb8cad15a5c67c3438be99faa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.2.1/ward-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7514a99442febf49280bc04d46a552d7a0df5b09d2a9158d3975775b816d7d46"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.3.0/ward-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cc728b33900997b350683b112343fe4d93b6e0a8a0cc0b20d8f7d28b4b61f35a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.2.1/ward-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "11d87886a13b7ff3c1b32689de0c797a80476b77bb204f8aaf367956f43c7dd6"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.3.0/ward-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "df043456b5519d6eee55adec4c9b027f03f7a435bbf0508074e357ff2a911b0a"
     end
   end
   license "MIT"
