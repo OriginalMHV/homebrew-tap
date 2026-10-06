@@ -1,25 +1,25 @@
 class WardCli < Formula
   desc "GitHub repository management for developers. Plan, apply, verify."
   homepage "https://github.com/OriginalMHV/Ward"
-  version "0.4.2"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.4.2/ward-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "d5ae4f22958c3c711f01e84648486206cb88e6b08811bd48940372b2e2a154a8"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.5.0/ward-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "12e3653543da8e68a562d82d259a4766c4722bb69454ce27427dfcd488a5383d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.4.2/ward-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "74e9943e84f510ccd03b689389d4bcee6411ccdf1c1124ba888dd78cef586a61"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.5.0/ward-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "da709dfab0ff388a48d0401daecf4e0a951fc8de90ed65055ae5b47e49bfb52c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.4.2/ward-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "976d54f836013ff36df21aecc6ef6c87c7225c551eb8bfda11403051aa924505"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.5.0/ward-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ec35fa47fc8c15201acddf0ceb781aed0a776e9ec74eb61708c8649eff5a6eb4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/Ward/releases/download/v0.4.2/ward-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d68efc5cc2ff15d604337614d91622637649bb1dc37e039264d78223cd86488d"
+      url "https://github.com/OriginalMHV/Ward/releases/download/v0.5.0/ward-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "53eb683087cba856cf0d7a59b1ee32bf25f6af58a067a7ce0e9d2d3ab5da640b"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class WardCli < Formula
   end
 
   def install
-    bin.install "ward" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ward" if OS.mac? && Hardware::CPU.intel?
-    bin.install "ward" if OS.linux? && Hardware::CPU.arm?
-    bin.install "ward" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "ward"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "ward"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "ward"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "ward"
+    end
 
     install_binary_aliases!
 
