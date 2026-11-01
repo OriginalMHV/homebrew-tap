@@ -1,25 +1,25 @@
 class Minimenta < Formula
   desc "Minuere impedimenta: an interactive disk usage analyzer for the terminal"
   homepage "https://github.com/OriginalMHV/minimenta"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.1.0/minimenta-aarch64-apple-darwin.tar.xz"
-      sha256 "e9535fb7ddbbb2c450495a403473df25f28caae47789760826b7f3b201b81cbd"
+      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.2.0/minimenta-aarch64-apple-darwin.tar.xz"
+      sha256 "40f11287f8f146139112a1d031a4b48367ba259fd40fbf2eb6e8d27ea50ae11b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.1.0/minimenta-x86_64-apple-darwin.tar.xz"
-      sha256 "cb74e37dfefb2b78a9d6531da4c0685cf0b9070453117629072cd35974620b02"
+      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.2.0/minimenta-x86_64-apple-darwin.tar.xz"
+      sha256 "493737b8d998ed322fafe1ccd8cd52e8a712ddd53ebc2563d349f1a451636fb2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.1.0/minimenta-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "40b9d67f3bf7977694c7c846cac76484317eda348c9230778cc1d359c608bd2c"
+      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.2.0/minimenta-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "468251deefd5eecacbaec646ba108cfcc41956fc44ca0eafe3d82a42a3b7f00e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.1.0/minimenta-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "408001dc6ff70f8b87866a56df332c85af7d18ba98f1a1938680955a1c64962f"
+      url "https://github.com/OriginalMHV/minimenta/releases/download/v0.2.0/minimenta-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "962c8f9a7635d4c3a9fcdc925cbd51e414aea6a89b0811a0726cf54245c2e331"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
